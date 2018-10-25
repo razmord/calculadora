@@ -57,6 +57,7 @@ function botonopera(){
             case "dOk": resultado= parseFloat(resultado)/factorialize(parseFloat(npantalla)); break;
             default: break;      
         }
+        input="="; 
     }else{
         switch(oppulsada){
             case 0: resultado=parseFloat(npantalla); break;
