@@ -3,7 +3,7 @@ div.calculadora {
     margin: 0 auto;
     width: 650px;
     max-width: 650px;
-    min-height: 600px;
+    min-height: 700px;
     border-top-left-radius: 3%;
     border-top-right-radius: 3%;
     border-bottom-left-radius: 7%;
@@ -42,10 +42,15 @@ div.botonera {
     margin: 20px auto;
     width: 550px;
     max-width: 550px;
-    min-height: 410px;
+    min-height: 570px;
 /*    border: 1px black solid;*/
 }
-
+div.complejas{
+    text-align: center;
+    width: 550px;
+    max-width: 550px;
+    margin-bottom: 20px;
+}
 div.numeros {
     width: 400px;
     max-width: 400px;
@@ -82,5 +87,19 @@ div.operaciones>button{
     border-top-right-radius: 100%;
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
+    border-color: rgb(255, 218, 148);
+}
+
+div.complejas>button{
+    display: inline;
+    padding: 3px;
+    margin: 15px 15px 10px 15px;
+    font-size: 48px;
+    color:rgb(223, 108, 66);
+    background-color: rgb(128, 128, 128);
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
     border-color: rgb(255, 218, 148);
 }
