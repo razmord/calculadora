@@ -5,6 +5,7 @@ var pantalla=document.getElementsByClassName("pantalla")[0];
 pantalla.innerHTML=npantalla;
 var numeros=document.querySelectorAll("div.numeros > button");
 var operac=document.querySelectorAll("div.operaciones > button");
+var compleja=document.querySelectorAll("div.complejas > button");
 
 function botonnumero(){
    var input = this.innerHTML;
@@ -24,23 +25,30 @@ function botonnumero(){
        npantalla=npantalla+input;
    }
    pantalla.innerHTML=npantalla;
-   if(oppulsada=="=") oppulsada=0;
+   if(oppulsada=="="||oppulsada=="√") oppulsada=0;
    if(oppulsada=="x") oppulsada="xOk";
    if(oppulsada=="÷"&&npantalla!=0) oppulsada="dOk";
 }
 function botonopera(){
     var input = this.innerHTML;
+    if(oppulsada=="√"){
+        oppulsada=0;
+        npantalla=resultado;
+    }
+    if(input=="√")
+        oppulsada=input;
     switch(oppulsada){
         case 0: resultado=parseFloat(npantalla); break;
         case "+": resultado=parseFloat(npantalla)+parseFloat(resultado); break;
         case "-": resultado=parseFloat(resultado)-parseFloat(npantalla); break;
         case "xOk": resultado= parseFloat(resultado)*parseFloat(npantalla); break;
         case "dOk": resultado= parseFloat(resultado)/parseFloat(npantalla); break;
+        case "√": resultado=Math.sqrt(npantalla); break;
         case "=": break;      
     }
     oppulsada=input;
     npantalla=0;
-    if(input=="="){
+    if(input=="="||input=="√"){
         pantalla.innerHTML=resultado;
     }
  }
@@ -51,4 +59,8 @@ for (var i = 0; i < numeros.length; i++) {
 
 for (var i = 0; i < operac.length; i++) {
     operac[i].addEventListener('click', botonopera, false);
+}
+
+for (var i = 0; i < compleja.length; i++) {
+    compleja[i].addEventListener('click', botonopera, false);
 }
