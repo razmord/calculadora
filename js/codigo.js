@@ -55,6 +55,7 @@ function botonopera(){
             case "-": resultado=parseFloat(resultado)-factorialize(parseFloat(npantalla)); break;
             case "xOk": resultado= parseFloat(resultado)*factorialize(parseFloat(npantalla)); break;
             case "dOk": resultado= parseFloat(resultado)/factorialize(parseFloat(npantalla)); break;
+            case "^": resultado=Math.pow(parseFloat(resultado), factorialize(parseFloat(npantalla))); break;
             default: break;      
         }
         input="="; 
@@ -65,6 +66,7 @@ function botonopera(){
             case "-": resultado=parseFloat(resultado)-parseFloat(npantalla); break;
             case "xOk": resultado= parseFloat(resultado)*parseFloat(npantalla); break;
             case "dOk": resultado= parseFloat(resultado)/parseFloat(npantalla); break;
+            case "^": resultado=Math.pow(parseFloat(resultado), parseFloat(npantalla)); break;
             case "√": resultado=Math.sqrt(npantalla); break;
             case "=": break;      
         }
