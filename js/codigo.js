@@ -37,7 +37,15 @@ function botonopera(){
     }
     if(input=="√")
         oppulsada=input;
-    switch(oppulsada){
+    if(input=="%"){
+        switch(oppulsada){
+            case "+": resultado=parseFloat(resultado)+(parseFloat(resultado)*(parseFloat(npantalla)/100)); break;
+            case "-": resultado=parseFloat(resultado)-(parseFloat(resultado)*(parseFloat(npantalla)/100)); break;
+            case "xOk": resultado= (parseFloat(resultado)*(parseFloat(npantalla)/100)); break;    
+            default: break;
+        }
+        input="=";
+    }else switch(oppulsada){
         case 0: resultado=parseFloat(npantalla); break;
         case "+": resultado=parseFloat(npantalla)+parseFloat(resultado); break;
         case "-": resultado=parseFloat(resultado)-parseFloat(npantalla); break;
