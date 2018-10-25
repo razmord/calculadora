@@ -1,0 +1,86 @@
+div.calculadora {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 auto;
+    width: 650px;
+    max-width: 650px;
+    min-height: 600px;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    border-bottom-left-radius: 7%;
+    border-bottom-right-radius: 7%;
+    background-color: wheat;
+    box-shadow: 12px 12px 25px 1px rgba(0,0,0,0.65);
+}
+
+h2 {
+    text-align: center;
+    padding: 0.7em; 
+    padding-bottom: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: italic;
+    color: orangered;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-color: orange;
+}
+
+div.pantalla {
+    margin: 0 auto;
+    background-color: gray;
+    color:orange;
+    width: 550px;
+    max-width: 550px;
+    min-height: 50px;
+    border: 3px rgb(165, 162, 127) inset;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: right;
+    padding-right: 10px;
+}
+
+div.botonera {
+    margin: 20px auto;
+    width: 550px;
+    max-width: 550px;
+    min-height: 410px;
+/*    border: 1px black solid;*/
+}
+
+div.numeros {
+    width: 400px;
+    max-width: 400px;
+    min-height: 360px;
+    border: 1px black dotted;
+}
+
+div.operaciones {
+    float: right;
+    width: 120px;
+    max-width: 120px;
+    min-height: 280px;
+    border: 1px rgb(185, 185, 185);
+    border-style: ridge;
+    padding-bottom: 10px;
+}
+
+button{
+    margin: 15px 0px 0px 25px;
+    font-size: 56px;
+    width: 100px;
+    color: orange;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+}
+div.operaciones>button{
+    margin: 15px 0px 0px 10px;
+    font-size: 48px;
+    color:orangered;
+    background-color: orange;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-color: rgb(255, 218, 148);
+}
