@@ -40,7 +40,6 @@ function botonopera(){
             npantalla=resultado;
         oppulsada=input;
     }
-        
     if(input=="%"){
         switch(oppulsada){
             case "+": resultado=parseFloat(resultado)+(parseFloat(resultado)*(parseFloat(npantalla)/100)); break;
@@ -49,6 +48,15 @@ function botonopera(){
             default: break;
         }
         input="=";
+    }else if(input=="x!"){
+        switch(oppulsada){
+            case 0: resultado=factorialize(parseFloat(npantalla)); break;
+            case "+": resultado=factorialize(parseFloat(npantalla))+parseFloat(resultado); break;
+            case "-": resultado=parseFloat(resultado)-factorialize(parseFloat(npantalla)); break;
+            case "xOk": resultado= parseFloat(resultado)*factorialize(parseFloat(npantalla)); break;
+            case "dOk": resultado= parseFloat(resultado)/factorialize(parseFloat(npantalla)); break;
+            default: break;      
+        }
     }else{
         switch(oppulsada){
             case 0: resultado=parseFloat(npantalla); break;
@@ -78,3 +86,12 @@ for (var i = 0; i < operac.length; i++) {
 for (var i = 0; i < compleja.length; i++) {
     compleja[i].addEventListener('click', botonopera, false);
 }
+
+function factorialize(num) {
+    if (num == 0 || num == 1)
+      return 1;
+    for (var i = num - 1; i >= 1; i--) {
+      num = num * i; // or num *= i;
+    }
+    return num; //120
+  }
