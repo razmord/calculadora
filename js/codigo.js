@@ -35,8 +35,12 @@ function botonopera(){
         oppulsada=0;
         npantalla=resultado;
     }
-    if(input=="√")
+    if(input=="√"){
+        if(oppulsada=="=")
+            npantalla=resultado;
         oppulsada=input;
+    }
+        
     if(input=="%"){
         switch(oppulsada){
             case "+": resultado=parseFloat(resultado)+(parseFloat(resultado)*(parseFloat(npantalla)/100)); break;
