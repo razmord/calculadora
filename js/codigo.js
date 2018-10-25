@@ -45,14 +45,16 @@ function botonopera(){
             default: break;
         }
         input="=";
-    }else switch(oppulsada){
-        case 0: resultado=parseFloat(npantalla); break;
-        case "+": resultado=parseFloat(npantalla)+parseFloat(resultado); break;
-        case "-": resultado=parseFloat(resultado)-parseFloat(npantalla); break;
-        case "xOk": resultado= parseFloat(resultado)*parseFloat(npantalla); break;
-        case "dOk": resultado= parseFloat(resultado)/parseFloat(npantalla); break;
-        case "√": resultado=Math.sqrt(npantalla); break;
-        case "=": break;      
+    }else{
+        switch(oppulsada){
+            case 0: resultado=parseFloat(npantalla); break;
+            case "+": resultado=parseFloat(npantalla)+parseFloat(resultado); break;
+            case "-": resultado=parseFloat(resultado)-parseFloat(npantalla); break;
+            case "xOk": resultado= parseFloat(resultado)*parseFloat(npantalla); break;
+            case "dOk": resultado= parseFloat(resultado)/parseFloat(npantalla); break;
+            case "√": resultado=Math.sqrt(npantalla); break;
+            case "=": break;      
+        }
     }
     oppulsada=input;
     npantalla=0;
