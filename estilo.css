@@ -53,6 +53,10 @@ div.numeros {
     max-width: 400px;
     min-height: 360px;
     border: 1px black dotted;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
 }
 
 div.operaciones {
@@ -62,6 +66,10 @@ div.operaciones {
     min-height: 280px;
     border: 1px rgb(185, 185, 185);
     border-style: ridge;
+    border-top-left-radius: 3%;
+    border-top-right-radius: 3%;
+    border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%;
     padding-bottom: 10px;
 }
 
